@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/fireandice/static/css/main.dc5bb619.css",
+    "main.js": "/fireandice/static/js/main.304c5cca.js",
+    "static/js/787.b60f9014.chunk.js": "/fireandice/static/js/787.b60f9014.chunk.js",
+    "index.html": "/fireandice/index.html",
+    "main.dc5bb619.css.map": "/fireandice/static/css/main.dc5bb619.css.map",
+    "main.304c5cca.js.map": "/fireandice/static/js/main.304c5cca.js.map",
+    "787.b60f9014.chunk.js.map": "/fireandice/static/js/787.b60f9014.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dc5bb619.css",
+    "static/js/main.304c5cca.js"
+  ]
+}
