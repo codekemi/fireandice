@@ -13,22 +13,21 @@ function Character() {
           `https://anapioficeandfire.com/api/characters?page=${page}&pageSize=10`
         );
 
-        // Combine with previous characters
-        const combinedCharacters = [...characters, ...response.data];
+        setCharacters((prevCharacters) => {
+          const combinedCharacters = [...prevCharacters, ...response.data];
 
-        // Filter named characters
-        const namedCharacters = combinedCharacters.filter(
-          (character) => character.name && character.name.trim() !== ""
-        );
+          const namedCharacters = combinedCharacters.filter(
+            (character) => character.name && character.name.trim() !== ""
+          );
 
-        setCharacters(namedCharacters);
+          if (namedCharacters.length < 10 && response.data.length > 0) {
+            setPage(page + 1);
+          } else {
+            setIsLoading(false);
+          }
 
-        if (namedCharacters.length < 10 && response.data.length > 0) {
-          // Increase page to fetch more characters
-          setPage(page + 1);
-        } else {
-          setIsLoading(false);
-        }
+          return namedCharacters;
+        });
       } catch (error) {
         console.error("Error fetching characters:", error);
         setIsLoading(false);
