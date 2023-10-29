@@ -1,0 +1,88 @@
+.houseWithMembers {
+  display: flex;
+  margin-bottom: 2rem;
+  border: 2px solid #d4af37; /* gold border */
+}
+
+.house {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+  padding: 2rem;
+  border: 2px solid #7e7e7e; /* grey border */
+  background-color: #2e2e2e; /* dark background for medieval feel */
+}
+
+.house--selected {
+  border-color: #ce3d3d; /* red border for selected */
+}
+
+.house:not(.house--selected):hover {
+  border-color: #6cd265; /* green hover color */
+}
+
+.house__imageContainer {
+  flex-grow: 1;
+  width: 8rem;
+  height: 8rem;
+  margin-bottom: 2rem;
+}
+
+.house__image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+.house__info {
+  font-size: 1rem;
+  color: #d4af37; /* gold color for text */
+}
+
+.house__members {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.house__member {
+  padding: 1rem 1rem 1rem 0;
+  border: 1px solid #7e7e7e; /* grey border for each member */
+  margin: 0.5rem;
+}
+
+.house__member__imageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  margin-bottom: 1rem;
+  cursor: pointer; /* changed from 'grab' to 'pointer' for more web-friendly feel */
+  border: 2px solid #7e7e7e;
+}
+
+.house__member--selected .house__member__imageContainer {
+  border-color: #ce3d3d; /* red for selected member */
+}
+
+.house__member:not(.house__member--selected)
+  .house__member__imageContainer:hover {
+  border-color: #6cd265; /* green for hover */
+}
+
+.house__member__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%; /* added this to make the member images circular */
+}
+
+.house__member__image--default {
+  font-size: 2.4rem;
+}
+
+.house__member__info {
+  font-size: 1rem;
+  color: #d4af37; /* gold color for member's text */
+}

@@ -1,0 +1,40 @@
+/* Books.module.css */
+
+body {
+  background-color: #191919; /* Dark background for a medieval feel */
+  color: #eaeaea; /* Light text to contrast with the dark background */
+  font-family: "Times New Roman", Times, serif; /* A more traditional font for medieval aesthetics */
+}
+
+h1 {
+  border-bottom: 2px solid #8b4513; /* Brownish color to resemble leather or old parchment */
+  text-align: center;
+  padding: 20px;
+  font-size: 2.5em;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: #292929; /* Slightly lighter than the body background for contrast */
+  margin: 20px 0;
+  padding: 15px;
+  border: 1px solid #8b4513; /* Brownish border */
+  border-radius: 5px;
+}
+
+h2 {
+  font-size: 2em;
+  margin: 0;
+  color: #f8a502; /* Golden color for a touch of royalty */
+}
+
+p {
+  margin: 5px 0;
+  font-size: 1.2em;
+}
+
+/* For responsiveness, you may also want to add media queries or further stylings as needed. */
