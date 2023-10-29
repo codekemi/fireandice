@@ -1,33 +1,39 @@
 .navigation {
   display: flex;
+  flex-wrap: wrap; /* Allows wrapping of items if there's not enough space */
   align-items: center;
   justify-content: center;
-  height: 100%;
-  background-color: #1a1a1a; /* Adding a dark background to match the theme */
-  border-bottom: 4px solid #5a3929; /* Dark brown border for a more rustic look */
+  height: auto; /* Adaptable height based on content */
+  padding: 1rem; /* Some space for better visual appearance */
+  background-color: #1a1a1a;
+  border-bottom: 4px solid #5a3929;
 }
 
 .navigation__item {
   font-size: 1.4rem;
-  margin: 0 2rem;
-  padding: 1rem;
+  margin: 0.5rem; /* Adjusted margin for better spacing */
+  padding: 0.5rem; /* Adjusted padding */
   text-decoration: none;
-  color: #aaa9a0; /* Using a silver-like color to match the medieval theme */
+  color: #aaa9a0;
   border: 2px solid transparent;
-  transition: color 0.3s ease; /* Smooth transition for hover effect */
+  transition: color 0.3s ease;
 }
 
 .navigation__item:hover {
-  color: #b5651d; /* A shade of bronze/gold for hover effect, inspired by the rich colors of GoT banners */
+  color: #b5651d;
 }
 
 .navigation__item--active {
-  border: 2px solid #b5651d; /* Same bronze/gold color for the active item border */
-  font-weight: bold; /* Making the active item bolder */
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.2
-  ); /* Slightly dark background for active item */
+  border: 2px solid #b5651d;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Media query for devices with a max width of 600px */
+@media (max-width: 600px) {
+  .navigation__item {
+    font-size: 1rem; /* Smaller font size for smaller screens */
+    margin: 0.3rem;
+    padding: 0.3rem;
+  }
 }
